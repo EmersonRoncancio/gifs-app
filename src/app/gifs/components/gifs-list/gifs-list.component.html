@@ -1,0 +1,5 @@
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+  @for (gift of gifts(); track $index) {
+    <app-gifts-list-item [giftItem]="gift"/>
+  }
+</div>
