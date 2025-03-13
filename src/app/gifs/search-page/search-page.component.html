@@ -1,1 +1,18 @@
-<p>search-page works!</p>
+<h2 class="text-2xl font-semibold mt-2 text-center">Buscador de Gids</h2>
+<h3 class="font-bold text-center">Buscar gids por nombre, descripcion o tag</h3>
+
+<section class="flex flex-col gap-3 mt-3 items-center">
+  <input
+    class="outline-0 rounded-2xl bg-amber-50 p-2 focus:outline-2 outline-amber-100 w-[80%]"
+    type="text"
+    placeholder="Buscar"
+    (keyup.enter)="onChangeValue(txtValue.value)"
+    #txtValue />
+  <button class="bg-amber-100 py-1 px-2 hover:bg-amber-200 rounded-2xl w-[300px]">Buscar</button>
+</section>
+
+<section class="mt-4">
+  <app-gifs-list [gifts]="searchGifs()" [loading]="gifsService.loading()"/>
+</section>
+
+
