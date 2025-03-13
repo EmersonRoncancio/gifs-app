@@ -1,5 +1,6 @@
 import { Component, input, signal } from '@angular/core';
 import { GiftsListItemComponent } from "./gifts-list-item/gifts-list-item.component";
+import { GifType } from '../../interfaces/gif.interface';
 
 
 @Component({
@@ -9,6 +10,6 @@ import { GiftsListItemComponent } from "./gifts-list-item/gifts-list-item.compon
 })
 export class GifsListComponent {
 
-  gifts = input.required<string[]>();
-
+  gifts = input.required<GifType[]>();
+  loading = input.required<boolean>();
 }

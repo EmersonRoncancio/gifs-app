@@ -4,4 +4,5 @@ export const environment = {
   companyName: 'GifsPro',
   companyName3: 'App',
   slogan: 'Manejador de Gifs',
+  apyKayGifs: 'QjHzLjbrrReF987ehYxBJQDR8wLuLMXH',
 };

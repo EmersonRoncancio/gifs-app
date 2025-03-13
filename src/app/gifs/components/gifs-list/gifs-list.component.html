@@ -1,5 +1,11 @@
 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-  @for (gift of gifts(); track $index) {
-    <app-gifts-list-item [giftItem]="gift"/>
+  @if(loading()){
+    <div class="col-span-3">
+      <span>CARGANDO</span>
+    </div>
+  } @else {
+    @for (gift of gifts(); track gift.id) {
+      <app-gifts-list-item [giftItem]="gift.url"/>
+    }
   }
 </div>
